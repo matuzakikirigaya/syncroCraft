@@ -1,0 +1,47 @@
+
+values('https://twitter.com/herp_inc,https://www.facebook.com/herpinc/,https://herp.co.jp','2019-07-26 06:45:04' , '2019-08-13 06:45:04 ',NULL , NULL ,'7c7ffe11-e566-4451-adfb-6eeeff7eca58 ',NULL,NULL,'遠山 理恵','8f93ab99-4b22-4eba-8cb9-2d7a60b4402c',NULL  ,NULL,NULL,NULL,'jl8bu8qkp29j581ct93jxds0f1q7v79p', NULL,NULL,'fc90a979-1819-4cbf-8426-93ccca876ea7 ', '2019-07-22 05:37:46.356053' ,'2019-07-22 05:37:46.356053','C-464R6'   ,   1 ,NULL,       ,                 , 26  , NULL   ,' アリス・リバー株式会社 '                        ,'神奈川県立湘南台高等学校普通科卒'                                                              ,      ,NULL    ,'2019-04-07 05:37:44' ,'水曜日 カジュアル面談 '                           )
+
+
+values('https://twitter.com/herp_inc','2019-07-26 06:45:04' , '2019-08-13 06:45:04 ',NULL , NULL ,'7c7ffe11-e566-4451-adfb-6eeeff7eca58 ',NULL,NULL,'遠山 理恵','8f93ab99-4b22-4eba-8cb9-2d7a60b4402c',NULL  ,NULL,NULL,NULL,'jl8bu8qkp29j581ct93jxds0f1q7v79p', NULL,NULL,'fc90a979-1819-4cbf-8426-93ccca876ea7 ', '2019-07-22 05:37:46.356053' ,'2019-07-22 05:37:46.356053','C-464R6'   ,   1 ,NULL,26  , NULL   ,' アリス・リバー株式会社 '                        ,'神奈川県立湘南台高等学校普通科卒'                                                              ,NULL    ,'2019-04-07 05:37:44' ,'水曜日 カジュアル面談 '                           )
+
++-----------------------------------+---------------+------+-----+----------------------+-------+| Field                             | Type          | Null | Key | Default              | Extra |+-----------------------------------+---------------+------+-----+----------------------+-------+
+| uuid                              | varchar(255)  | NO   | PRI | NULL                 |       |
+| created_at                        | datetime(6)   | NO   | MUL | CURRENT_TIMESTAMP(6) |       |
+| updated_at                        | datetime(6)   | NO   | MUL | CURRENT_TIMESTAMP(6) |       |
+| company_id                        | varchar(255)  | NO   |     | NULL                 |       |
+| step                              | tinyint(4)    | NO   |     | NULL                 |       |
+| selection_termination_reason      | tinyint(4)    | YES  |     | NULL                 |       |
+| email                             | varchar(255)  | NO   |     | NULL                 |       |
+| telephone_number                  | varchar(255)  | NO   |     | NULL                 |       |
+| age                               | varchar(255)  | YES  |     | NULL                 |       |
+| birthday                          | date          | YES  |     | NULL                 |       |
+| company                           | varchar(255)  | NO   |     | NULL                 |       |
+| education                         | varchar(255)  | NO   |     | NULL                 |       |
+| career                            | text          | NO   |     | NULL                 |       |
+| avatar_url                        | varchar(255)  | YES  |     | NULL                 |       |
+| applied_at                        | datetime      | YES  |     | NULL                 |       |
+| note                              | varchar(1800) | NO   |     | NULL                 |       |
+| links                             | text          | NO   |     | NULL                 |       |
+| step_updated_at                   | datetime      | NO   |     | NULL                 |       |
+| selection_terminated_at           | datetime      | YES  |     | NULL                 |       |
+| channel_kind                      | tinyint(4)    | YES  |     | NULL                 |       |
+| channel_description               | varchar(255)  | YES  |     |                      |       |
+| requisition_uuid                  | varchar(255)  | YES  | MUL | NULL                 |       |
+| recommendation_comment            | varchar(1250) | YES  |     | NULL                 |       |
+| agent_uuid                        | varchar(255)  | YES  | MUL | NULL                 |       |
+| name                              | varchar(255)  | NO   |     | NULL                 |       |
+| media_connection_candidacy_uri    | varchar(255)  | YES  | UNI | NULL                 |       |
+| agent_recommendation_identifier   | varchar(64)   | YES  | UNI | NULL                 |       |
+| message_to_company                | varchar(1250) | YES  |     | NULL                 |       |
+| career_page_id                    | varchar(255)  | YES  | MUL | NULL                 |       |
+| referral_uuid                     | varchar(255)  | YES  | UNI | NULL                 |       |
+| candidacy_mail_address_local_part | varchar(64)   | NO   | UNI | NULL                 |       |
+| smarthr_crew_url                  | varchar(255)  | YES  |     | NULL                 |       |
+| kaonavi_connected_at              | datetime      | YES  |     | NULL                 |       |
++-----------------------------------+---------------+------+-----+----------------------+-------+
+
+candidacies(uuid,created_at,updated_at,company_id,step,email,telephone_number,company,education,career,note,links,step_updated_at,name,candidacy_mail_address_local_part)
+values('38cd0b26-188e-43f1-9ebb-a1bbf0238d8f',)
+candidacies (uuid, created_at ,updated_at ,company_id,step ,selection_termination_reason,email,telephone_number , age ,birthday,company,education,career , avatar_url ,applied_at,note,links,step_updated_at,selection_terminated_at ,channel_kind , channel_description, requisition_uuid, recommendation_comment, agent_uuid, name, media_connection_candidacy_uri, agent_recommendation_identifier , message_to_company , career_page_id , referral_uuid , candidacy_mail_address_local_part , smarthr_crew_url , kaonavi_connected_at )
+values('9ceda1fb-35d3-40c5-8a9a-3a4641ecd84a', '2019-09-26 06:45:08.463234' , '2019-09-26 06:45:08.463234','C-464R6',5 ,NULL,'hoge',123123123123, 35  , NULL, 'Saga, Inc.' ,'東京工業大学工学部情報工学科卒',  '  ', NULL,'2019-07-28 06:45:04','水曜日 カジュアル面談', 'https://twitter.com/herp_inc,https://www.facebook.com/herpinc/,https://herp.co.jp','2019-09-26 06:45:04' , NULL , NULL ,NULL,'5a9d3ccd-7f2b-4ba5-8919-0e6fa662ba93', '  ','6b45c5a0-4c59-42f5-a56b-be0d9ea31fb6','芦田 真紀',NULL,'3c0559fc', NULL,NULL,NULL,'e5ef9fnzwcdgitgylizpxjpjvm1qgaaa' ,NULL,NULL)
+values('9ceda1fb-35d3-40c5-8a9a-3a4641ecd83a', '2019-09-26 06:45:08.463234' , '2019-09-26 06:45:08.463234','C-464R6',5 ,NULL,'hoge',123123123123, 35  , NULL, 'Saga, Inc.' ,'東京工業大学工学部情報工学科卒',  '  ', NULL,'2019-07-28 06:45:04','水曜日 カジュアル面談', 'https://twitter.com/herp_inc,https://www.facebook.com/herpinc/,https://herp.co.jp','2019-09-26 06:45:04' , NULL , NULL ,NULL,'5a9d3ccd-7f2b-4ba5-8919-0e6fa662ba92', '  ','6b45c5a0-4c59-42f5-a56b-be0d9ea31fb1','芦田 真紀',NULL,'3c0559fd', NULL,NULL,NULL,'e5ef9fnzwcdgitgylizpxjpjvm1qgaa0' ,NULL,NULL)
