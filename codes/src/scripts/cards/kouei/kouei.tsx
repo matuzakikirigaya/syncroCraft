@@ -10,10 +10,8 @@ import {
     p,
     VNode
   } from "@cycle/dom";
-  import { css } from "emotion";
   import * as Snabbdom from "snabbdom-pragma";
   import "../../stylus/style.styl";
-  import { run } from "@cycle/run";
   import { Stream } from "xstream";
   
   type Sources = { DOM: DOMSource };
@@ -22,15 +20,18 @@ import {
     const sinks = {
       DOM: sources.DOM.select(".slider")
         .events("mousedown")
+        .debug("hoge")
         .map((ev: any) => (ev.target as HTMLInputElement).checked)
         .startWith(false)
         .map(() => (
           <div className="hoge">
-            <input className="slider" type="checkbox">
-              aaaaaaaaaa
-            </input>ああああああああああああああああ
+            <div className="zennei">前衛</div>
+            <div className="kouei">後衛</div>
+            <div className="hands">手札</div>
+            <div className="deck">デッキ</div>
           </div>
         ))
     };
     return sinks;
   }
+  

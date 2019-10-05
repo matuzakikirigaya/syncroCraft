@@ -17,7 +17,7 @@ const babelLoaderOption = {
         }
       ]
     ],
-    plugins: [["transform-react-jsx", { pragma: "html" }]]　// react使うための設定だって
+    plugins: [["transform-react-jsx", { pragma: "html" }]] // react使うための設定だって
   }
 };
 
@@ -30,7 +30,7 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
-    modules: ["node_modules"]
+    modules: ["node_modules"],
   },
   devServer: {
     // webpack-dev-serverの公開フォルダ
