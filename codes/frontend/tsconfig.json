@@ -21,6 +21,6 @@
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts", "src/scripts/ui/action/action.tsxction.tsx", "src/scripts/components/naraberu.tsx"
   ]
 }

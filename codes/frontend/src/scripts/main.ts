@@ -4,7 +4,7 @@ import "../stylus/style.styl";
 import { run } from "@cycle/run";
 import { Stream } from "xstream";
 // import { main } from "./cards/main";
-import { main } from "./components/modal/main";
+import { main } from "./ui/main";
 
 run(main, {
   DOM: makeDOMDriver("#app")
