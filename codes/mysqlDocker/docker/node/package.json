@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/mysql": "2.15",
+    "promise-mysql": "4.1"
+  },
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
