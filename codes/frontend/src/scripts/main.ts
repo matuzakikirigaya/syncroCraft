@@ -3,9 +3,11 @@ import * as Snabbdom from "snabbdom-pragma";
 import "../stylus/style.styl";
 import { run } from "@cycle/run";
 import { Stream } from "xstream";
-// import { main } from "./cards/main";
 import { main } from "./ui/main";
+import { start } from "../mukankei/cycle/recruit5/main";
 
-run(main, {
-  DOM: makeDOMDriver("#app")
-});
+// run(main, {
+//   DOM: makeDOMDriver("#app")
+// });
+
+start();
