@@ -10,11 +10,13 @@ import {
   p,
   VNode,
   span,
-  button
+  button,
+  MainDOMSource
 } from "@cycle/dom";
 import * as Snabbdom from "snabbdom-pragma";
 import xs, { Stream, Subscription } from "xstream";
 import { run } from "@cycle/run";
+import { Driver } from "@cycle/run/lib/cjs";
 import { makeScrollDriver } from "./scrollDriver";
 
 type Sources = {
@@ -75,7 +77,10 @@ function main(sources: Sources): Sinks {
   };
 }
 
-const drivers = {
+const drivers: {
+  DOM: Driver<Stream<VNode>, MainDOMSource>;
+  Scroll: (offsetTop$: Stream<number>) => Stream<number>;
+} = {
   DOM: makeDOMDriver("#app"),
   Scroll: makeScrollDriver()
 };
