@@ -31,7 +31,7 @@ export function hands(sources: Sources): Sinks {
   return sinks;
 }
 
-function handCardToSore(hand: string) {
+function handCardToSore(hand: string): VNode {
   const handClass = classNames("hands", hand);
   return <div className={handClass}>{hand}</div>;
 }

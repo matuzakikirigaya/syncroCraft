@@ -1,5 +1,0 @@
-show databases;
-use {"table name"};
-SHOW TABLES FROM データベース名;
-
-データベース、テーブル、レコード

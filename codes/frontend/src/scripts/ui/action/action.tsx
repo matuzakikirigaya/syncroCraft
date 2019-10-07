@@ -22,11 +22,15 @@ type Sources = {
 type Sinks = { DOM: Stream<VNode> };
 export function actions(sources: Sources): Sinks {
   const sinks = {
-    DOM: sources.actions$.map((actions) => <div className="actionZone">{actions.map(action => actionToSore(action))}</div>)
+    DOM: sources.actions$.map((actions) => (
+      <div className="actionZone">
+        {actions.map((action) => actionToSore(action))}
+      </div>
+    ))
   };
   return sinks;
 }
 
-function actionToSore(action:string) {
-  return <div className="action">{action}</div>
+function actionToSore(action: string): VNode {
+  return <div className="action">{action}</div>;
 }

@@ -27,9 +27,12 @@ export function main(sources: Sources): Sinks {
   const inputtation$ = xs
     .merge(
       sources.inputActions$,
+      DOM.select(".kouei")
+      .events("click")
+      .mapTo(["ま", "み"]),
       DOM.select(".hands")
         .events("click")
-        .mapTo(["ま", "み"])
+        .mapTo(["むめ", "も"])
     )
     .startWith(["0"]);
   const zenneiNoyatu$ = zenneis({
