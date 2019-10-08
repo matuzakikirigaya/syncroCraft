@@ -1,0 +1,23 @@
+version: "3"
+services:
+  node_suru:
+    build: .
+    tty: true
+    volumes:
+      - .:/work
+    working_dir: /work
+    ports:
+      - 9000:3000 #appで3000にするようにしてる。なぜ9000でこうなるのかイマイチよくわからない。
+
+  db:
+    image: mysql:8.0
+    volumes:
+      - db-store:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_DATABASE=typescript
+    ports:
+      - 22000:2000
+
+volumes:
+  db-store:
