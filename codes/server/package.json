@@ -6,6 +6,7 @@
   "devDependencies": {
     "@types/express": "^4.17.1",
     "@types/koa": "^2.0.50",
+    "@types/koa-router": "^7.0.42",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/parser": "^2.3.3",
     "babel-jest": "^24.9.0",
@@ -14,6 +15,7 @@
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
     "koa": "^2.8.2",
+    "koa-router": "^7.4.0",
     "nodemon": "^1.19.3",
     "prettier": "^1.18.2",
     "ts-loader": "^6.2.0",
@@ -28,6 +30,7 @@
     "express": "^4.17.1"
   },
   "scripts": {
+    "reset": "rm -rf dist/; mkdir -p dist/",
     "dev": "nodemon -L",
     "build": "webpack --config ./webpack/prod.config.js",
     "start": "npm run build && node dist/server.js"

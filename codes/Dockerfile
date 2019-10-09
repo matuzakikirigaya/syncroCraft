@@ -1,8 +1,8 @@
-FROM groovy:2.4.11-jre-alpine AS codegen
+# FROM groovy:2.4.11-jre-alpine AS codegen
 
-USER root
+# USER root
 
-WORKDIR /workdir
+# WORKDIR /workdir
 
 FROM node:10.14.0-alpine
 
@@ -12,8 +12,11 @@ COPY . /workdir
 
 #ENV inu "dog"
 
-RUN cd server && yarn && \
-    yarn tsc -p .
+RUN cd server && \
+    yarn && \
+    yarn reset && \
+    yarn build
+# yarn tsc -p .
 # ENTRYPOINT ["/dokoka", "--"]
 
 CMD ["node", "server/dist/server.js"]

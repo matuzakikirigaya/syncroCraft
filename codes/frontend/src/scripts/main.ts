@@ -13,4 +13,4 @@ import { start as start2 } from "../mukankei/cycle/recruit8/main2"; // カーソ
 // });
 
 start2();
-start1();
+//start1();
