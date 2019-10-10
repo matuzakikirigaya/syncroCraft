@@ -1,0 +1,2 @@
+db.sample.insert({ "_id" : ObjectId("5bd990d4e87b2960d233577f"), "field_a" : "りんご" });
+db.sample.insert({ "_id" : ObjectId("5bd990d4e87b2960d2335780"), "field_a" : "いちご" });
