@@ -23,7 +23,6 @@
     "prettier": "^1.18.2",
     "reflect-metadata": "^0.1.13",
     "ts-loader": "^6.2.0",
-    "ts-node": "^8.4.1",
     "typeorm": "^0.2.19",
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
@@ -39,6 +38,6 @@
     "dev": "nodemon -L",
     "build": "webpack --config ./webpack/prod.config.js",
     "start": "npm run build && node dist/server.js",
-    "startnode": "yarn ts-node src/scripts/main.ts"
+    "start2": "tsc -p . && node dist/scripts/main.js"
   }
 }

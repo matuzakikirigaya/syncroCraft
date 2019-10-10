@@ -11,12 +11,12 @@ createConnection({
   username: "nodeuser",
   password: "nodeuser",
   database: "testdb",
-  entities: [__dirname + "/entity/*.ts"], //多分ここで*.tsを指定する都合上、ts-nodeだと動くけどwebpackで動かない。tscでやると動くはず
+  entities: [User,Catalog], //多分ここで*.tsを指定する都合上、ts-nodeだと動くけどwebpackで動かない。tscでやると動くはず
   synchronize: true,
   logging: false
 })
   .then(async connection => {
-    let savedCatalogs = await connection.manager.find(User);
+    let savedCatalogs = await connection.manager.find(Catalog);
    console.log("All catalogs from the db: ", savedCatalogs);
  }).catch(error => console.log(error));
 }
