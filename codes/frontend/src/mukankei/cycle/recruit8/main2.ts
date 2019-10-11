@@ -79,7 +79,7 @@ function main({ DOM, HTTP }: SoAll): SiAll {
       (e: CycleDOMEvent) => (e.ownerTarget as HTMLInputElement).value
     )
   );
-  const f = (_, [postTitle, postBody]: String[]) => ({
+  const f = (_: any, [postTitle, postBody]: String[]) => ({
     url: "http://jsonplaceholder.typicode.com/posts",
     category: "api",
     method: "POST",

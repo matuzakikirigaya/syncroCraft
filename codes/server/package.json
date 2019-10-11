@@ -37,7 +37,7 @@
     "reset": "rm -rf dist/; mkdir -p dist/",
     "dev": "nodemon -L",
     "build": "webpack --config ./webpack/prod.config.js",
-    "start": "npm run build && node dist/server.js",
-    "start2": "tsc -p . && node dist/scripts/main.js"
+    "start": "yarn build && node dist/server.js",
+    "start2": "tsc -p . && node dist/scripts/main.js # typeormを用いる場合なんかstartだと問題があるっぽい"
   }
 }
